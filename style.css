@@ -1,35 +1,54 @@
 /* TESTING SPACE */
-
+/*
 * {
     border:1px solid pink;
 }
-
+*/
 /* GENERAL STYLES */
 
+body{
+    background:#eee;
+    color:#181e2b;
+    font-family:'Baloo 2', cursive;
+}
+
 h1{
-    font-family:sans-serif;
+    font-family:'Press Start 2P',cursive;
     font-size:32px;
 }
 
 h1 a{
     text-decoration: none;
-    color:pink;
+    color:#fff;
+}
+
+h2{
+    font-family:'Press Start 2P',cursive;
+    padding:0 10px;
+}
+
+h2:hover{
+    background:#df443c;
+    border-left:3px solid #181e2b;
+    border-right:3px solid #181e2b;
+    width:400px;
+    transition: 0.4s;
 }
 
 /* HEADER */
 
 header{
-    background:darkred;
+    background:#df443c;
     text-align:center;
-    color:lightcoral;
+    height:100px;
+    padding-top:30px;
 }
-
-
 
 /* NAVIGATION */
 
 nav{
-    background:navy;
+    background:rgba(10,12,18,0.8);
+    display:flex;
 }
 
 nav ul{
@@ -37,22 +56,23 @@ nav ul{
     list-style:none;
     font-family:sans-serif;
     font-weight:bold;
+    display:flex;
+    flex:1;
 }
 
 nav ul a{
     text-decoration:none;
-    color:lightpink;
+    color:#df443c;
 }
 
 nav li {
-    display:inline-flex;
     padding:10px;
 }
 
 /* SECTION */
 
 section{
-    background:lightcyan;
+    /*background:lightcyan;*/
     margin:50px;
     padding:30px;
 }
@@ -69,7 +89,7 @@ section img{
 /* MAIN */
 
 main {
-    background:lightgoldenrodyellow;
+    /*background:lightgoldenrodyellow;*/
     margin:50px;
     padding:30px;
 }
@@ -80,28 +100,41 @@ main img{
     margin-right:auto;
 }
 
+/* CARDS */
+
+.category{
+    display:flex;
+}
+
+.card{
+    flex:1;
+}
+
+.card img{
+    display:inline;
+}
+
 /* FOOTER */
 
 footer{
-    background:navy;
-    color:lightpink;
-    font-family:sans-serif;
-    font-weight:bold;
-    display:flex;
+    background:#0a0c12;
+    color:#df443c;
     padding:30px;
+    display:flex;
 }
 
 .links{
-    align-items: flex-start;
+    padding:20px;
+    flex:1;
 }
 
 .links a{
-    color:pink;
+    color:#df443c;
     text-decoration:none;
 }
 
 .links a:hover{
-    color:coral;
+    color:#df443c;
     transition:0.4s;
 }
 
@@ -110,11 +143,16 @@ footer{
 }
 
 .socials {
-    align-items: center;
+    border-left:1px solid #df443c;
+    border-right:1px solid #df443c;
+    padding:20px;
+    flex:1;
 }
 
 .schedule{
-    align-items: flex-end;
+    padding:20px;
+    text-align:right;
+    flex:1;
 }
 
 /* CREDIT */
