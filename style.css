@@ -1,3 +1,35 @@
+/* version 2.0 */
+
+/* COLOR PALETTE */
+
+blue{
+    color:#95a8e2;
+}
+
+purple{
+    color:#a39ed8;
+}   
+
+orange{
+    color:#dab490;
+}
+
+orange2{
+    color:#e0aa86;
+}
+
+red{
+    color:#ce8892;
+}
+
+black{
+    color:#34344c;
+}
+
+black2{
+    color:#0f0f11;
+}
+
 /* TESTING SPACE */
 /*
 * {
@@ -6,10 +38,19 @@
 */
 /* GENERAL STYLES */
 
+body,
+html{
+    height:100%;
+}
+
 body{
-    background:#eee;
-    color:#181e2b;
+    background:url(https://i.ibb.co/ByKhqch/60e32be8517fcd68b21bfaad-Mesh-74.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:#34344c;
     font-family:'Baloo 2', cursive;
+    margin:0;
 }
 
 h1{
@@ -19,55 +60,81 @@ h1{
 
 h1 a{
     text-decoration: none;
-    color:#fff;
+    color:#ce8892;
 }
 
 h2{
     font-family:'Press Start 2P',cursive;
     padding:0 10px;
     width:auto;
-    border-left:3px solid #181e2b;
-    border-right:3px solid #181e2b;
+    border-left:3px solid #0f0f11;
+    border-right:3px solid #0f0f11;
+    transition:0.2s;
 }
 
 h2:hover{
-    background:#df443c;
-    width:450px;
-    transition: 1s;
+    background:#ce8892;
+    transform:scale(1.1,1);
+    transition: 0.4s;
+}
+
+h3{
+    text-align:center;
 }
 
 /* HEADER */
 
-header{
-    background:#df443c;
-    text-align:center;
-    height:100px;
-    padding-top:30px;
+.hero {
+    background-image:url(img/hero.jpg);
+    min-height:100vh;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    display:flex;
+}
+
+.hero h1{
+    top:50vh;
+    left:50vw;
+    position:absolute;
+    text-align:right;
+}
+
+.hero h3{
+    position:absolute;
+    top:55vh;
+    right:15vw;
 }
 
 /* NAVIGATION */
 
-nav{
-    background:rgba(10,12,18,0.8);
+#nav{
+    font-family:'Baloo 2',cursive;
+    font-size:14pt;
+    background:rgba(52,52,76,0.6);
+    overflow:hidden;
+    border: 1px solid #0f0f11;
+    border-left:none;
+    border-right:none;
     display:flex;
     justify-content: flex-end;
 }
 
-nav ul{
-    padding:10px;
+#nav ul{
     list-style:none;
-    font-family:sans-serif;
-    font-weight:bold;
     display:flex;
+    margin-right:100px;
 }
 
-nav ul a{
+#nav ul a{
+    color:#0f0f11;
     text-decoration:none;
-    color:#df443c;
 }
 
-nav li {
-    padding:10px;
+#nav li {
+    padding: 2px 8px 2px 30px;
 }
 
 /* SECTION */
@@ -77,15 +144,17 @@ section{
     margin:250px;
     padding:30px;
     text-align:center;
-}
-
-section h2{
-    display:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 section img{
-    display:block;
-    margin:50px auto;
+    background-color:#dab490;
+    border:3pt solid #e0aa86;
+    border-radius:100%;
+    width:200px;
 }
 
 /* MAIN */
@@ -100,12 +169,35 @@ main {
     align-items:center;
 }
 
-main img{
-
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:fit-content;
 }
 
-main h2{
-    align-self:flex-start;
+.sticky + main {
+    padding-top:60px;
+}
+
+/* PRICELIST */
+
+.pricelist{
+    background:rgba(52,52,76,0.6);
+    border-radius:10px;
+    border: 1px solid #0f0f11;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:stretch;
+}
+
+.pricelist h2{
+    align-self:center;
+}
+
+#pricecont{
+    display:flex;
 }
 
 /* CARDS */
@@ -119,11 +211,8 @@ main h2{
 
 .card,
 .blogcard{
-    border:rgba(10,12,18,0.1) solid 1px;
-    border-radius:8px;
     margin:20px;
     padding:20px;
-    background:rgba(10,12,18,0.1);
     width:200px;
     display:flex;
     flex-direction:column;
@@ -131,41 +220,13 @@ main h2{
     align-items:stretch;
 }
 
-.pricecard{
-    border:rgba(10,12,18,0.3) solid 1px;
-    border-radius:8px;
-    margin:20px;
-    padding:20px;
-    background:rgba(10,12,18,0.2);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.pricecard h2{
-    color:#df443c;
-    border:none;
-    align-self:center;
-}
-
-.pricecard h2:hover{
-    width:auto;
-    background:none;
-    color:#181e2b;
-}
-
 .card img{
-    align-self:center;
-}
-
-.blogcard img{
-
+    padding:10px;
 }
 
 .card p{
     font-size:12px;
-    color: #757575;
+    color: #ce8892;
     align-self:center;
     flex-wrap:wrap;
 }
@@ -177,46 +238,74 @@ main h2{
 
 .card a{
     text-decoration: none;
-    color:#df443c;
+    color:#ce8892;
     font-weight:bold;
 }
 
 .card a:hover{
-    color:#181e2b;
+    color:#0f0f11;
     transition:0.4s;
+}
+
+.pricecard{
+    background:rgba(218,180,144,0.2);
+    border:rgba(218,180,144,0.6) solid 1px;
+    border-radius:8px;
+    width:100px;
+    margin:20px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.pricecard h2{
+    color:#ce8892;
+    border:none;
+    align-self:center;
+}
+
+.pricecard h2:hover{
+    width:auto;
+    background:none;
+    color:#181e2b;
 }
 
 /* FOOTER */
 
 footer{
-    background:#181e2b;
-    color:#df443c;
-    padding:20px;
+    color:#181e2b;
+    margin:40px;
+    height:300px;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 footer h2{
     font-size:14px;
     text-align:center;
-    color:#eee;
+    color:#a39ed8;
 }
 
 .quicklinks{
-    border-right:1px solid #df443c;
-    padding:10px;
-    align-self:center;
+    background:rgba(52,52,76,0.6);
+    border:1px solid #0f0f11;
+    border-radius:10px;
+    margin:10px;
+    padding:20px;
+    align-self:stretch;
     flex:1;
 }
 
 .quicklinks a{
-    color:#df443c;
+    color:#dab490;
     text-decoration:none;
 }
 
 .quicklinks a:hover{
-    color:#df443c;
+    color:#dab490;
     transition:0.4s;
 }
 
@@ -225,14 +314,18 @@ footer h2{
 }
 
 .socials {
-    color:#df443c;
+    background:rgba(52,52,76,0.6);
+    border:1px solid #0f0f11;
+    border-radius:10px;
+    color:#dab490;
     font-size:45px;
-    margin:20px;
+    margin:10px;
     padding:20px;
+    align-self:stretch;
 }
 
 .socials a{
-    color:#df443c;
+    color:#dab490;
     margin:5px;
 }
 
@@ -262,9 +355,13 @@ footer h2{
 }
 
 .schedule{
-    border-left:1px solid #df443c;
+    background:rgba(52,52,76,0.6);
+    border:1px solid #0f0f11;
+    border-radius:10px;
+    border-left:1px solid #dab490;
+    margin:10px;
     padding:20px;
-    align-self:center;
+    align-self:stretch;
     flex:1;
     text-align:right;
 }
