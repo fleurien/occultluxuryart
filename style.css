@@ -126,6 +126,7 @@ h3{
     list-style:none;
     display:flex;
     margin-right:100px;
+    transition:0.2s;
 }
 
 #nav ul a{
@@ -133,8 +134,29 @@ h3{
     text-decoration:none;
 }
 
+#nav ul a:hover{
+    color:#ce8892;
+    transition:0.4s;
+}
+
 #nav li {
     padding: 2px 8px 2px 30px;
+}
+
+#fas fa-bars{
+    color:#0f0f11;
+    display:block;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+/* SLIDEOUT */
+
+#slideout{
+    display:none;
+    margin-top:1px;
+    width:100%;
 }
 
 /* SECTION */
@@ -155,6 +177,13 @@ section img{
     border:3pt solid #e0aa86;
     border-radius:100%;
     width:200px;
+    transition: 0.2s;
+}
+
+section img:hover{
+    background-color:#ce8892;
+    border-color:#c97581;
+    transition:0.4s;
 }
 
 /* MAIN */
@@ -199,7 +228,7 @@ main {
 
 #pricecont{
     height:fit-content;
-    width:90%;
+    width:100%;
     display:flex;
     justify-content: space-between;
     align-items: stretch;
@@ -216,6 +245,8 @@ main {
 
 .card,
 .blogcard{
+    height:100%;
+    width:100%;
     max-width:200px;
     max-height:400px;
     margin:10px;
@@ -224,6 +255,7 @@ main {
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    text-transform:lowercase;
 }
 
 .card img{
@@ -404,4 +436,91 @@ footer{
     color:#ff2c4c;
     font-weight:bold;
     transition:0.4s;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px){
+
+    #nav{
+        display:none;
+    }
+
+    #fa-bars{
+        display:flex;
+    }
+
+    #slideout{
+        background:rgba(52,52,76,0.6);
+        font-family:'Baloo 2', cursive;
+        font-size:14pt;
+        border:1px solid #0f0f11;
+        border-left:none;
+        border-right:none;
+        display:inline-block;
+        position:fixed;
+        top:0vw;
+    }
+    
+    #slideout ul{
+        list-style:none;
+    }
+    
+    #slideout ul a{
+        color:#0f0f11;
+        text-decoration:none;
+    }
+
+    #slideout ul li{
+        margin:8px;
+        display:inline-block;
+    }
+
+    #pricecont{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    section{
+        width:50vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin:auto;
+    }
+
+}
+
+@media (max-width: 719px){
+
+    .card{
+        width:100%;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+        width:100%;
+    }
+
+}
+
+@media (max-width:600px){
+    main{
+        width:100%;
+    }
+
+    @media (min-width:729px){
+        main{
+            width:95%;
+        }
+    }
+}
+
+@media(min-width:1200px){
+    main{
+        width:85%;
+    }
 }

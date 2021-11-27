@@ -4,21 +4,21 @@ Build for occultluxuryart.com
 
 Site status:
 
-Initial build in progress
+Site is live with version 2.0! 
+Responsive design in progress.
 
 
 Needs:
 
-- Designs page [blog] [tagged]
-- Blog page [blog] [tagged]
-- Terms of Service page
-- Contact page
+- Responsive design
+- Open/closed/streaming spotlight
+- Available slots slideout
 - Convert to Wordpress
 
 
 Wants:
 
-- Sidebar/slideout for slots
-- Open/closed spotlight
+- Designs page [blog] [tagged]
+- Blog page [blog] [tagged]
 - Waitlist ping 
 - NSFW button
